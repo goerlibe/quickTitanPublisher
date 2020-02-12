@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  form(action="./publish" method="POST" class="form")
+    div(class="form-row")
+      div(class="form-group col-md-6")
+        label(for="client") client
+        input(
+          type="text"
+          id="client"
+          name="client"
+          class="form-control"
+          value= data.client
+        )
+      div(class="form-group col-md-6")
+        label(for="uuid") uuid
+        input(
+          type="text"
+          id="uuid"
+          name="uuid"
+          class="form-control"
+          value= data.uuid
+        )
+    div(class="form-row")
+      div(class="form-group col-md-12")
+        label(for="quickPub") quick publish options
+        select(id="quickPub", name="quickPub", class="form-control")
+          for opt in data.quickOptions
+            option= opt[0]
+    div(class="form-row")
+      div(class="form-group col-md-6")
+        label(for="topic") topic
+        input(
+          type="text"
+          id="topic"
+          name="topic"
+          class="form-control"
+          value= data.topic
+        )
+      div(class="form-group col-md-6")
+        label(for="body") payload.body
+        input(
+          type="text"
+          id="body"
+          name="body"
+          class="form-control"
+          value= data.body
+        )
+    div(class="form-row")
+      input(type="submit" value="Submit" class="btn btn-lg btn-primary btn-block")

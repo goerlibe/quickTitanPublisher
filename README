@@ -1,0 +1,15 @@
+quick and dirty tool to publish titan-related messages
+
+install:
+yarn
+
+start:
+yarn run watch
+(will automatically restart if you change code)
+
+use: 
+visit localhost:3000/connect , fill out the form and submit
+you will be forwarded to localhost:3000/publish (if you visit this directly you will get a nasty error)
+fill out the form and submit 
+    if you chose `do not use quick publish options` you can configure topic and body yourself (prefix will be added automatically), empty body will be discarded
+    you can also chose one of the quick options (e.g. start). in this case the custom topic and body will be ignored and a preconfigured msg will be published

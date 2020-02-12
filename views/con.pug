@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  form(action="./connect" method="POST" class="form")
+    div(class="form-row")
+      div(class="form-group col-md-6")
+        label(for="host") MQTT host
+        input(
+          type="text"
+          id="host"
+          name="host"
+          class="form-control"
+          value= data.host
+        )
+      div(class="form-group col-md-6")
+        label(for="prefix") topic prefix
+        input(
+          type="text"
+          id="prefix"
+          name="prefix"
+          class="form-control"
+          value= data.prefix
+        )
+    div(class="form-row")
+      input(type="submit" value="Submit" class="btn btn-lg btn-primary btn-block")
