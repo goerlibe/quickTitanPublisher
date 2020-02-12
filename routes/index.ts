@@ -69,7 +69,10 @@ router.post("/publish", (req, res) => {
     topic = req.body.topic;
     body = req.body.body;
   }
-  publish(topic, prepareMessage(req.body.client, req.body.uuid, body));
+  publish(
+    topic,
+    prepareMessage(req.body.client, req.body.uuid, parseBody(body))
+  );
   res.render("form", {
     title: title,
     data: {
@@ -84,6 +87,14 @@ router.post("/publish", (req, res) => {
     }
   });
 });
+
+function parseBody(body: string): string | unknown {
+  try {
+    return JSON.parse(body);
+  } catch {
+    return body;
+  }
+}
 
 function quickOptionWasUsed(usedOption): boolean {
   console.log("used: " + usedOption);
