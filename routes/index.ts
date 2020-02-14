@@ -10,17 +10,18 @@ const mqttQuickOptions: [string, string, unknown][] = [
   ["do not use quick options", undefined, undefined],
   ["start", "cmd/print/start", undefined],
   ["stop", "cmd/print/stop", undefined],
-  ["one print only", "cmd/print/job/set", [["onePrint.job", 1]]],
-  ["endless job", "cmd/print/job/set", [["endless.job", -1]]],
+  ["set: one print only", "cmd/print/job/set", [["onePrint.job", 1]]],
+  ["set: endless job", "cmd/print/job/set", [["endless.job", -1]]],
   [
-    "queue of 3",
+    "set: queue of 3",
     "cmd/print/job/set",
     [
       ["first.job", 1],
       ["second.job", 1],
       ["third.job", 1]
     ]
-  ]
+  ],
+  ["add: one print only", "cmd/print/job/add", [["onePrint.job", 1]]]
 ];
 const title = "TITAN-micro-MQTT";
 const mqttDefaults = { host: "mqtt://localhost", prefix: "reajet/testing" };
