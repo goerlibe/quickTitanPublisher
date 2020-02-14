@@ -3,7 +3,16 @@ extends layout
 block content
   form(action="./publish" method="POST" class="form")
     div(class="form-row")
-      div(class="form-group col-md-6")
+      div(class="form-group col-md-4")
+        label(for="prefix") topic prefix
+        input(
+          type="text"
+          id="prefix"
+          name="prefix"
+          class="form-control"
+          value= data.prefix
+        )
+      div(class="form-group col-md-4")
         label(for="client") client
         input(
           type="text"
@@ -12,7 +21,7 @@ block content
           class="form-control"
           value= data.client
         )
-      div(class="form-group col-md-6")
+      div(class="form-group col-md-4")
         label(for="uuid") uuid
         input(
           type="text"
@@ -26,7 +35,7 @@ block content
         label(for="quickPub") quick publish options
         select(id="quickPub", name="quickPub", class="form-control")
           for opt in data.quickOptions
-            option= opt[0]
+            option= opt.desc
     div(class="form-row")
       div(class="form-group col-md-6")
         label(for="topic") topic
