@@ -1,7 +1,7 @@
 {
-  "name": "titan-quick-mqtt",
+  "name": "@rea-jet/titan-quick-mqtt-tester",
   "version": "1.0.0",
-  "description": "quickly send prepared mqtt messages, quick & dirty implementation",
+  "description": "quickly send prepared mqtt messages or handcraft your own messages, quick & dirty implementation",
   "main": "main.ts",
   "author": "Bertin Görlich",
   "license": "MIT",
