@@ -2,6 +2,12 @@
 
 quick and dirty tool to publish titan-micro-mqtt related messages
 
+## WARNING
+
+**THIS TOOL IS NO LONGER MAINTAINED AND IS KNOWN TO DEPEND ON VULNERABLE PROJECTS.**
+
+**DO NOT USE THIS IN A PRODUCTION ENVIRONMENT**
+
 ## install
 
 simply run `yarn`
